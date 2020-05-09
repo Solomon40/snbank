@@ -1,7 +1,7 @@
 # import necessary libraries
 import numpy as np 
 from random import randint
-import json
+import datetime
 import os
 
 #create staff data 
@@ -43,7 +43,19 @@ def gen_acc_num():
 
 
 #define function to store user session in file
+def store_sess(x):
+    currentDT = datetime.datetime.now()
+    with open("user_session.txt", "w") as ss:
+        ss.write(f'{x}\t Last Login: {currentDT}')
+    return "saved"
 
+
+#define function to delete user session
+def del_sess(x):
+    file = open("user_session.txt","r+")
+    if x in file:
+        file.truncate(0)
+        file.close()
 
 #define a function to save customer details
 def save_cust(p, a,b,c,d):
@@ -62,7 +74,7 @@ print("(a) Staff Login\n ")
 print("(b) Close App ")
 selection = input().lower()
 
-if selection == "a":
+while selection == "a":
     print("Please enter the following:\n ")
     x = input("Username: ")
     y = input("Password: ")
@@ -70,6 +82,7 @@ if selection == "a":
     if ver_user(x) or ver_user(y) is False:
         print("Invalid username or password. Please try again")
     else:
+        store_sess()
         print("Please select (a/b/c):\n ")
         print("(a) Create New Bank Account\n ")
         print("(b) Check Account Details\n ")
@@ -99,4 +112,12 @@ if selection == "a":
                     break
                 else:
                     print("Invalid account number. Please try again")
-            
+
+        if selection == "c":
+            #delete session file
+            del_sess(x)
+    break
+
+if selection == "b":
+    print("Thank you for banking with us!")
+    quit
