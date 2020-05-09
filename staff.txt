@@ -1,1 +1,1 @@
-['Lagbaja Nothing', 'Lagbaja', 'lagbaja@ymail.com', '12345'] ['Fela Water', 'Fela', 'fela@ymail.com', '98765']
+{"staff1": {"Full Name": "Lagbaja Nothing", "Username": "Lagbaja", "email": "lagbaja@ymail.com", "Password": "12345"}, "staff2": {"Full Name": "Fela Water", "Username": "Fela", "email": "fela@ymail.com", "Password": "98765"}}
