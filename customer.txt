@@ -1,1 +1,1 @@
-{'11111122223 details': {'Account Name': 'blah', 'Opening Balance': 'black', 'Account Type': 'black', 'Account email': 'sheep'}}
+{"2899112962": {"Account Name": "Aveku", "Opening Balance": "1000", "Account Type": "Savings", "Account email": "Ave@ymail.com"}, "2135008667": {"Account Name": "Amalech", "Opening Balance": "3000", "Account Type": "Current", "Account email": "ama@gmail.com"}}
